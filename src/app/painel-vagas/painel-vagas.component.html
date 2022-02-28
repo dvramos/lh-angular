@@ -1,11 +1,18 @@
 <h2>Cadastrar</h2>
+<div class="container">
 <form>
-    <label>Id</label><input type="text" name="id" [(ngModel)] = "vaga.id"><br>
-    <label>Nome</label><input type="text" name="id" [(ngModel)] = "vaga.nome"><br>
-    <label>Foto</label><input type="text" name="id" [(ngModel)] = "vaga.foto"><br>
-    <label>Descrição</label><input type="text" name="id" [(ngModel)] = "vaga.descricao"><br>
-    <label>Salário</label><input type="text" name="id" [(ngModel)] = "vaga.salario"><br>
-    <button type="button" (click)="cadastrar()">Cadastrar Vaga</button>
-    <button type="button" (click)="atualizar(vaga.id)">Atualizar Vaga</button>
-    <button type="button" (click)="excluir(vaga.id)">Excluir Vaga</button>
+    <table>
+        <tr><td><b>Id</b> </td>         <td><input type="text" name="id" [(ngModel)] = "vaga.id" ></td></tr>
+        <tr><td><b>Nome</b> </td>      <td><input type="text" name="id" [(ngModel)] = "vaga.nome"></td></tr>
+        <tr><td><b>Foto</b> </td>   <td><input type="text" name="id" [(ngModel)] = "vaga.foto"></td></tr>
+        <tr><td><b>Descrição</b> </td>          <td><input type="text" name="id" [(ngModel)] = "vaga.descricao"></td></tr>
+        <tr><td><b>Salário</b> </td>          <td><input type="text" name="id" [(ngModel)] = "vaga.salario"></td></tr>
+    </table>
+    
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <button type="button" class="btn btn-success" (click)="cadastrar()">Cadastrar</button>
+    <button type="button" class="btn btn-warning" (click)="atualizar(vaga.id)">Atualizar</button>
+    <button type="button" class="btn btn-danger" (click)="excluir(vaga.id)">Excluir</button>
+    </div>
 </form>
+</div>
